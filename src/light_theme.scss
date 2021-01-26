@@ -1,0 +1,64 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$movie-max-primary: mat-palette($mat-gray, 900);
+$movie-max-accent: mat-palette($mat-gray, A200, A100, A400);
+
+$movie-max-warn: mat-palette($mat-red);
+
+$movie-max-theme: mat-light-theme((
+  color: (
+    primary: $movie-max-primary,
+    accent: $movie-max-accent,
+    warn: $movie-max-warn,
+  )
+));
+
+@include angular-material-theme($movie-max-theme);
+
+mat-sidenav-content {
+  background-color: #fff;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(0, 0, 0, 0.32);
+}
+
+@media (min-width: 599px) {
+  /* width */
+  .mat-drawer-inner-container::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  .mat-drawer-inner-container::-webkit-scrollbar-track {
+    // background: #fff;
+  }
+
+  /* Handle */
+  .mat-drawer-inner-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .12);
+    border-radius: 24px;
+  }
+
+  /* Handle on hover */
+  .mat-drawer-inner-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .36);
+  }
+}
+
+svg {
+  fill: rgba(0, 0, 0, .6);
+}
+
+.mat-chip.mat-standard-chip {
+  color: rgba(0, 0, 0, 0.87);
+  border: 1px solid rgba(0,0,0,.24);
+  background-color: #fff;;
+}
+
+:root {
+  --mat-icon-color: rgba(0, 0, 0, .6);
+  --secondary-color: rgba(0, 0, 0, .6);;
+}
